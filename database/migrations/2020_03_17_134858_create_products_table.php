@@ -15,12 +15,12 @@ class CreateProductsTable extends Migration
             $table->integer('price');
             $table->integer('stock');
             $table->integer('discount');
-            $table->integer('user_id')->unsigned()->index();
+            $table->integer('user_id')->unsigned()->index();//هذا عبارة عن المستخدم الي انشأ هذا المنج
             $table->timestamps();
         });
     }
 
-    
+
     public function down()
     {
         Schema::dropIfExists('products');
